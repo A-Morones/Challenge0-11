@@ -7,7 +7,6 @@ router.get('/api/notes', async (req, res) => {
   res.json(dbJson);
 });
 
-
 router.post('/api/notes', (req, res) => {
   const dbJson = JSON.parse(fs.readFileSync("db/db.json","utf8"));
   const newFeedback = {
@@ -20,7 +19,6 @@ router.post('/api/notes', (req, res) => {
   res.json(dbJson);
 });
 
-
 router.delete('/api/notes/:id', (req, res) => {
   let data = fs.readFileSync("db/db.json", "utf8");
   const dataJSON =  JSON.parse(data);
@@ -32,3 +30,4 @@ router.delete('/api/notes/:id', (req, res) => {
 });
 
 module.exports = router; 
+
